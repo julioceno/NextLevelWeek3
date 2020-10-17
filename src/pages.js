@@ -22,7 +22,7 @@ module.exports = {
             
         } catch (error) {
             console.log(error)
-            return res.send('Erro no banco de dados')
+            return res.render('err/databaseerror')
         }
     },
 
@@ -33,7 +33,7 @@ module.exports = {
             return res.render('orphanages', {orphanages} )
         } catch(error) {
             console.log(error)
-            return res.send('Erro no banco de dados')
+            return res.render('err/databaseerror')
         }
     
     },
@@ -48,7 +48,7 @@ module.exports = {
 
         // Validar se todos os campos estão prenchidos
         if (Object.values(fields).includes('')) {
-            return res.send('Todos os campos devem está preenchidos')
+            return res.render('err/mapError')
         }
 
         try {
@@ -70,7 +70,7 @@ module.exports = {
 
         } catch (error) {
             console.log(error)
-            return res.send('Erro no banco de dados!')
+            return res.render('err/databaseerror')
         }
     }
     }

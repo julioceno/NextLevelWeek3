@@ -56,3 +56,31 @@
 .button-select button:last-child {
     border-radius: 0 2rem 2rem 0;
 }
+
+main .error-backspace  {
+        width: 10rem;
+        height: 5rem;
+        border: none;
+        background: #ffd666;
+        border-radius: 1.6rem;
+        cursor: pointer;
+    
+
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    
+        transition: background-color 0.2s;
+    
+        outline: none;
+}
+
+main .error-backspace:hover {
+    background:  #96feff;
+}
+
+main .error-backspace:focus {
+    border: .2rem solid #4F4F4F;
+}
+
+
