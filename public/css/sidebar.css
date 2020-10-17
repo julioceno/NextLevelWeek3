@@ -24,10 +24,16 @@ aside.sidebar footer button {
     justify-content: center;
 
     transition: background-color 0.2s;
+
+    outline: none;
 }
 
 aside.sidebar footer button:hover {
     background: #17d6eb;
+}
+
+aside.sidebar footer button:focus {
+    border: solid .3rem #4F4F4F ;
 }
 
 .with-sidebar {

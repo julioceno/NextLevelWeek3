@@ -48,15 +48,8 @@
 }
 */
 
-
-
-
-
-
-
 #page-error {
-  background: #29b6d1 ;
-
+  background: #29b6d1;
 
   text-align: center;
   height: 100vh;
@@ -65,8 +58,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-
 }
 
 .error-container {
@@ -76,11 +67,8 @@
   color: #5c8599;
   border: 1px solid #d3e2e5;
   border-radius: 2rem;
-  padding: 2rem 2rem 3rem 2rem ;
-
+  padding: 2rem 2rem 3rem 2rem;
 }
-
-
 
 .error-container h1 {
   padding: 0 0 2rem 0;
@@ -91,37 +79,36 @@
 }
 
 .error-container img {
-  padding:  0 2rem;
+  padding: 0 2rem;
   height: 4rem;
 }
 
 .error-container p {
-   padding-bottom: 30px;
-   height: 6rem;
-   font-weight: 700;
+  padding-bottom: 30px;
+  height: 6rem;
+  font-weight: 700;
 }
+
 
 @media (min-width: 760px) {
-
   .error-container {
-      width: 70rem; 
+    width: 70rem;
   }
 
-.error-container h1 {
-  padding-bottom:5rem;
+  .error-container h1 {
+    padding-bottom: 5rem;
 
-  font-size: 10rem;
-}
+    font-size: 10rem;
+  }
 
-.error-container img {
-  padding:  0 3rem;
-  height: 10rem;
-}
+  .error-container img {
+    padding: 0 3rem;
+    height: 10rem;
+  }
 
-.error-container p {
-   padding-bottom: 30px;
-   font-size: 3rem;
-   font-weight: 700;
-}
-
+  .error-container p {
+    padding-bottom: 30px;
+    font-size: 3rem;
+    font-weight: 700;
+  }
 }

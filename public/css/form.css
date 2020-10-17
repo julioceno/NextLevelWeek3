@@ -61,8 +61,10 @@ fieldset legend {
     border-radius: 2rem;
     
     color: #5c8599;
-   
+
+    outline: none;
 }
+
 
 
 .input-block input {
@@ -92,6 +94,14 @@ fieldset legend {
     border-radius: 2rem;
 
     cursor: pointer;
+
+    outline: none;
+}
+
+.input-block input:focus,
+.input-block textarea:focus,
+.input-block.images button:focus {
+    border: solid .3rem #4F4F4F ;
 }
 
 .new-upload {
