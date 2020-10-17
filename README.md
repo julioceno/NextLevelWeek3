@@ -6,3 +6,5 @@ Aqui está o Happy uma plataforma para encontrar instituições que prestam apoi
 No banco de dados eu subsitui a mensagem de erro que tinha nos catch por uma página, ou seja se o usuário não colocar as cordenadas quando estiver criando um orphanage 
 ele será direcionado para uma página em especifico, ou se tiver apenas um erro de banco de dados ele também será enviado para uma página diferente, essas páginas estão 
 na pasta err que está dentro de views.
+
+Também tirei todos os outlines dos botões e dos inputs, e coloquei uma borda no momento que eles estiverem em focus.
