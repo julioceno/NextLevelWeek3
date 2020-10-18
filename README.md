@@ -11,3 +11,6 @@ Tirei todos os outlines dos botões e dos inputs, e coloquei uma borda no moment
 
 Também compri os desafios do grande Mayk, no pages.js eu troquei o if e else por um operador ternário, e compri 
 também o desafio de checar de o usuário clicou no mapa no próprio frontend.
+
+Por último usando o getCurrentPosition eu consegui pegar a posição atual do usuário e colocar a latitude e a 
+longitude nesses lugares.
