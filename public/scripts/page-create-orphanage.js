@@ -1,37 +1,45 @@
-// Create map
-const map = L.map('mapid').setView([-27.222633,-49.6455874], 15)
+// Pegando a localização do usuário 
+navigator.geolocation.getCurrentPosition((position) => {
+    let lat;
+    let lng;
+  if ("geolocation" in navigator) {
+    lat = position.coords.latitude;
+    lng = position.coords.longitude;
+  } else {
+    lat = -27.222633;
+    lng = -49.6455874;
+  }
 
 
-// Create and add tileLayer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map)
+  // Create map
+  const map = L.map("mapid").setView([lat, lng], 15);
+  // Create and add tileLayer
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
-// Create icon
-const icon = L.icon({
+  // Create icon
+  const icon = L.icon({
     iconUrl: "/images/map-marker.svg",
     iconSize: [58, 68],
     iconAnchor: [29, 68],
-})
+  });
 
-let marker;
+  let marker;
 
+  // Create and add marker
+  map.on("click", (event) => {
+    lat = event.latlng.lat;
+    lng = event.latlng.lng;
 
-
-// Create and add marker 
-map.on('click', (event) => {
-   lat = event.latlng.lat;
-   lng = event.latlng.lng;
-
-    document.querySelector('[name=lat]').value = lat
-    document.querySelector('[name=lng]').value = lng
+    document.querySelector("[name=lat]").value = lat;
+    document.querySelector("[name=lng]").value = lng;
 
     // remove icon
-    marker && map.removeLayer(marker)
+    marker && map.removeLayer(marker);
 
-    // add icon layer 
-    marker = L.marker([lat, lng], { icon })
-    .addTo(map)
-})
-
+    // add icon layer
+    marker = L.marker([lat, lng], { icon }).addTo(map);
+  });
+});
 
 
 // adicionar o campo de fotos 
