@@ -14,10 +14,12 @@ const icon = L.icon({
 
 let marker;
 
+
+
 // Create and add marker 
 map.on('click', (event) => {
-    const lat = event.latlng.lat;
-    const lng = event.latlng.lng;
+   lat = event.latlng.lat;
+   lng = event.latlng.lng;
 
     document.querySelector('[name=lat]').value = lat
     document.querySelector('[name=lng]').value = lng
@@ -29,7 +31,6 @@ map.on('click', (event) => {
     marker = L.marker([lat, lng], { icon })
     .addTo(map)
 })
-
 
 
 
@@ -92,11 +93,15 @@ function toggleSelect() {
     input.value = button.dataset.value
 }
 
+
 function validate(event) {
-   // validar se lat e lng estao preechidos
-    const needsLatAndLng = true
-   if (needsLatAndLng) {
-       event.preventDefault()
+
+    const lat = document.querySelector('[name = lat]').value
+    const lng = document.querySelector('[name = lng]').value
+
+   if (!lat && !lng) {
        alert('Selecione um ponto no mapa')
-   }
+       event.preventDefault()
+    }
+
 }
